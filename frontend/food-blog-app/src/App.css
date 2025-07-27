@@ -30,6 +30,7 @@ header ul{
 header ul li{
   list-style: none;
   cursor: pointer;
+  color: #000;
 }
 
 li a{
@@ -50,6 +51,7 @@ li .login{
 
 header h2{
   margin-left: 1rem;
+  color: #000;
 }
 
 section{
@@ -63,6 +65,7 @@ section{
   margin-top: 6rem;
   gap:10rem;
   position: relative;
+  color: #ffff;
 }
 
 .home .left h1{
