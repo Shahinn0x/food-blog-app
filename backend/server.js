@@ -9,6 +9,7 @@ connectDB()
 app.use(express.json())
 app.use(cors())
 
+app.use("/",require("./routes/user.route"))
 app.use("/recipe",require("./routes/recipe.route"))
 app.listen(PORT,(err)=>{
     console.log(`app is listening on port ${PORT}`)

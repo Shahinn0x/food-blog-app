@@ -1,10 +1,12 @@
 import React from 'react';
 import f2 from '../assets/f4.jpg';
 import RecipeItems from '../components/RecipeItems';
-
+import { useNavigate } from 'react-router-dom';
+import addRecipe from './AddFoodRecipe';
 
 
 export default function Home() {
+    const navigate = useNavigate()
   return (
     <>
        
@@ -12,7 +14,7 @@ export default function Home() {
             <div className="left">
                 <h1>Food Recipe</h1>
                 <h5>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </h5>
-                <button>Share your recipe</button>
+                <button onClick={()=>navigate("/addRecipe")}>Share your recipe</button>
             </div>
             <div className='right'>
                 <img src={f2} width="400px" height="300px"  object-fit="cover"></img>
