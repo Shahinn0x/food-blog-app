@@ -7,6 +7,7 @@ import axios from 'axios'
 import AddFoodRecipe from './pages/AddFoodRecipe';
 
 
+
 const getAllRecipes=async()=>{
   let allRecipes=[]
   await axios.get('http://localhost:5000/recipe').then(res=>{
