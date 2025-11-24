@@ -1,0 +1,172 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fbff;
+  color: #333;
+}
+
+/* General Styles */
+
+.container{margin: auto 0; width: 1290; text-decoration: none;}
+.stechlocal{position: relative;}
+.stechlocal .contentbox{ width: 45%;border: 2px solid #666;position: absolute;border-radius: 20px;}
+.stechlocal .contentbox .readmorebtn::before{content: "";border-radius: 50px;background: #15327d;width: 46px; height: 46px;display: inline-block; }
+.stechlocal .contentbox .readmorebtn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #15327d;
+    font-weight: bold;
+}
+
+.stechlocal .contentbox .readmorebtn .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #15327d;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Pricing Section */
+.pricing {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.pricing h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.highlight {
+  border: 2px solid #1e40af;
+  background: #eff6ff;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #666;
+}
+
+.card .desc {
+  font-size: 0.9rem;
+  margin: 10px 0 20px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1e40af;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #1e40af;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #15327d;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 50px 20px;
+  background: #f1f5f9;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background: white;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background: #f9fafb;
+}
+
+.accordion-content p {
+  margin: 0;
+}

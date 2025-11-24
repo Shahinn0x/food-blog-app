@@ -38,6 +38,10 @@ const userLogin = async(req,res)=>{
     }
 }
 
+//it the random code just ignore it
+// this was written in bad mood...
+//this will may impact on the coders
+//  the code 
 const getUser = async(req,res)=>{
     const user = await User.findById(req.params.id)
     res.json({email:user.email})

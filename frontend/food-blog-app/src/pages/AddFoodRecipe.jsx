@@ -98,7 +98,9 @@ export default function AddFoodRecipe() {
 
     try {
       await axios.post("http://localhost:5000/recipe", formData, {
-        headers: { "Content-Type": "multipart/form-data" }
+        headers: { "Content-Type": "multipart/form-data",
+                    "authorization" :"bearer " +localStorage.getItem("token")
+         }
       });
       navigate("/");
     } catch (err) {

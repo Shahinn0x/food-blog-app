@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen,setIsOpen] = useState(false)
   let token=localStorage.getItem("token")
   const [isLogin,setIsLogin]=useState(token?false:true)
-
+  let user=JSON.parse(localStorage.getItem("user"))
   useEffect(()=>{
     setIsLogin(token ? false : true)
   },[token])
@@ -29,7 +29,7 @@ export default function Navbar() {
             <li><NavLink to="/">Home</NavLink></li>
             <li onClick={()=>isLogin && setIsOpen(true)}><NavLink to={!isLogin? "/myRecipe":"/"}>My Recipe</NavLink></li>
             <li onClick={()=>isLogin && setIsOpen(true)}><NavLink to={!isLogin? "/favRecipe":"/"}>favourites</NavLink></li>
-            <li onClick={checkLogin}><p className='login'>{(isLogin)?"Login":"Logout"}</p></li>
+            <li onClick={checkLogin}><p className='login'>{(isLogin)?"Login":"Logout"}{user?.email ? `(${user?.email})`:""}</p></li>
         </ul>
       </header>
       {(isOpen)&& <Modal onClose={()=>setIsOpen(false)}><InputForm setIsOpen={()=>setIsOpen(false)}/></Modal>}
